@@ -161,10 +161,12 @@ class Analyzer:
         
 #        IVData = self.getIVScan(testDir + '/IVScan_'+moduleName+'.csv')
 #        self.fResult.updateResult([moduleName,'Iat600V'],np.array(IVData[IVData['V']==-600]['I'])[0])
+        #IV data, I grader
         IVfile = self.getRecentFile(testDir + '/IVScan_'+ moduleName + '_*.csv', moduleName)
         IVData = self.getIVScan(IVfile)
         print(IVData)
-        At800 = IVData[IVData['V'] == '-800.0']
+
+        At800 = IVData[IVData['V'] == -800.0]
         Iat800 = At800['I'].to_string(index=False)
         print('Iat800=',Iat800)
         if float(Iat800)>0.00001:
@@ -265,10 +267,10 @@ class Analyzer:
         
     # Extract useful info about the IV scan
     def getIVScan(self, IVFile):
-        data = pd.read_csv(IVFile,delimiter='\t',header=None, names = ['VI'])
+        data = pd.read_csv(IVFile,delimiter=',',header=None, names = ['V','I'])
         df = pd.DataFrame(data)
-        df['V'] = df['VI'].str.split(',').str[0]
-        df['I'] = df['VI'].str.split(',').str[1]
+        #df['V'] = df['VI'].str.split(',').str[0]
+        #df['I'] = df['VI'].str.split(',').str[1]
         return df
         
 
