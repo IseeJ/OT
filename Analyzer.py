@@ -61,7 +61,7 @@ class Analyzer:
 
             print(chipName)
             logfile = self.getRecentFile(testDir + '/log*_' + chipSearchString + '_*.log', chipSearchString)
-
+            #print(logfile)
             logfilesAllChips += [logfile]
 
             # Current draw
@@ -82,7 +82,7 @@ class Analyzer:
             pafile = self.getRecentFile(testDir + '/mpa_test_'+ chipSearchString + '_*_pixelalive.csv', chipSearchString)
             
             #added
-            #print(pafile)
+            print(pafile)
             #print(chipSearchString)
             
             self.fResult.updateResult([moduleName,chipName],self.getNumberAndList(pafile,'Dead'))
@@ -129,11 +129,7 @@ class Analyzer:
                   Grade_list[n] = 'B'
                elif int(PerChip_list[n])>94 or NUnmaskable !=0:
                   Grade_list[n] = 'C'
-        #Unmaskable_list = self.getNumberAndList(maskfile,'Unmaskable')
-        #Number and list of Unmaskable pixels
-            #Unmaskable_list = self.getNumberAndList(maskfile,'Unmaskable')
-            #print(files, Unmaskable_list)
-            #print(type(Unmaskable_list))        
+        
         NUnmaskablePerChip = list(NUnmaskablePerChip_dict.values())
         for m in range(len(NUnmaskablePerChip)):
            if int(NUnmaskablePerChip[m]) != 0:
@@ -165,6 +161,20 @@ class Analyzer:
         
 #        IVData = self.getIVScan(testDir + '/IVScan_'+moduleName+'.csv')
 #        self.fResult.updateResult([moduleName,'Iat600V'],np.array(IVData[IVData['V']==-600]['I'])[0])
+        IVfile = self.getRecentFile(testDir + '/IVScan_'+ moduleName + '_*.csv', moduleName)
+        IVData = self.getIVScan(IVfile)
+        print(IVData)
+        At800 = IVData[IVData['V'] == '-800.0']
+        Iat800 = At800['I'].to_string(index=False)
+        print('Iat800=',Iat800)
+        if float(Iat800)>0.00001:
+           IVgrade = 'C'
+        elif float(Iat800)>0.000001:
+           IVgrade = 'B'
+        else:
+           IVgrade = 'A'
+        print('IV Grade =', IVgrade)
+    
     def getCurrent(self, logfile, varname, tag):
         returnDict = {}
         if len(logfile) <= 1:
@@ -230,7 +240,7 @@ class Analyzer:
         returnDict[varname+"Mean"] = mean
         returnDict[varname+"Std"] = std
         
-        # calculate outliers                                                                                                            
+        # calculate outliers                                                                                                  
         outliersHigh = []
         outliersLow = []
         for i, d in enumerate(data):
@@ -255,6 +265,12 @@ class Analyzer:
         
     # Extract useful info about the IV scan
     def getIVScan(self, IVFile):
+        data = pd.read_csv(IVFile,delimiter='\t',header=None, names = ['VI'])
+        df = pd.DataFrame(data)
+        df['V'] = df['VI'].str.split(',').str[0]
+        df['I'] = df['VI'].str.split(',').str[1]
+        return df
+        
 
-        return pd.read_csv(IVFile,delimiter='\t',header=None,names=['V','I'])
+        #return pd.read_csv(IVFile,delimiter='\t',header=None,names=['V','I'])
 
