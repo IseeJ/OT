@@ -144,15 +144,18 @@ class Analyzer:
               ItotGrade[t] = 'A'
            else:
               ItotGrade[t] = 'C'
-                
+        
+        FinalMPAGrade = []
+        for current, pix  in zip(ItotGrade, Grade_list):
+           FinalMPAGrade.append(max(current, pix))
 
         print('\nSummary')
         print('ItotPerChip=', ItotPerChip)
         print('Itot Grade=', ItotGrade)
         print('NNonOperationalPerChip =', NNonOperationalPerChip)
         print('NUnmaskablePerchip=', NUnmaskablePerChip)
-        print('\nMPA grade =',Grade_list)
-
+        print('Pixel Grade =',Grade_list)
+        print('\nMPA Grade=', FinalMPAGrade)  
         #trying to add grade value to dictionary
         self.fResult.updateResult([moduleName,'NAbnormalCurrentChips'],NAbnormalCurrent)
         self.fResult.updateResult([moduleName,'NUnmaskablePix'],NUnmaskable)
