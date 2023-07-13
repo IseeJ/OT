@@ -51,6 +51,7 @@ class Analyzer:
         NNonOperational = 0
         NNonOperationalPerChip = ""
         NUnmaskablePerChip_dict = {}
+        ItotPerChip = []
  
            
         for i in range(1,17):
@@ -70,6 +71,9 @@ class Analyzer:
             self.fResult.updateResult([moduleName,chipName],self.getCurrent(logfile,'Itotal','Total: '))
             
             itotal = 200 #self.fResult.getResultValue([moduleName,chipName,'Itotal']) 
+            Itot = self.getCurrent(logfile,'Itotal','Total: ')
+            ItotPerChip.append(Itot['Itotal'])
+
             if itotal > 250 or itotal < 150:
                 NAbnormalCurrent += 1
 
@@ -134,12 +138,20 @@ class Analyzer:
         for m in range(len(NUnmaskablePerChip)):
            if int(NUnmaskablePerChip[m]) != 0:
               Grade_list[m] = 'C'
+        ItotGrade = np.zeros(len(ItotPerChip),str)
+        for t in range(len(ItotPerChip)):
+           if ItotPerChip[t] > 100 and ItotPerChip[t] < 250:
+              ItotGrade[t] = 'A'
+           else:
+              ItotGrade[t] = 'C'
+                
 
-        print('\n Summary')
+        print('\nSummary')
+        print('ItotPerChip=', ItotPerChip)
+        print('Itot Grade=', ItotGrade)
         print('NNonOperationalPerChip =', NNonOperationalPerChip)
         print('NUnmaskablePerchip=', NUnmaskablePerChip)
-        print('MPA grade =',Grade_list)
-        
+        print('\nMPA grade =',Grade_list)
 
         #trying to add grade value to dictionary
         self.fResult.updateResult([moduleName,'NAbnormalCurrentChips'],NAbnormalCurrent)
@@ -150,7 +162,6 @@ class Analyzer:
         
 #        IVData = self.getIVScan(testDir + '/IVScan_'+moduleName+'.csv')
 #        self.fResult.updateResult([moduleName,'Iat600V'],np.array(IVData[IVData['V']==-600]['I'])[0])
-
     def getCurrent(self, logfile, varname, tag):
         returnDict = {}
         if len(logfile) <= 1:
@@ -166,7 +177,7 @@ class Analyzer:
         # Add it to the dict
         returnDict[varname] = I
        
-       	print(returnDict)
+
         return returnDict
         
     # Description
@@ -197,10 +208,7 @@ class Analyzer:
         returnDict["N"+varname+"Pix"] = len(indices)
         returnDict[varname+"Pix"] = pixelString
 
-        #print('DeadPix = ',returnDict['DeadPix'])
-        #print('InefficientPix = ',returnDict['InefficientPix'])
-        #print('UnmaskablePix = ',returnDict['UnmaskablePix'])
-        #print('NoisyPix = ',returnDict['NoisyPix'])
+        
         return returnDict
         
     # Extract useful info about noise given the part name and hist of noise / channel
