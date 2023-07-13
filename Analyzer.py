@@ -42,7 +42,7 @@ class Analyzer:
     def analyze(self, testDir, moduleName):
 
         self.fResult.updateResult([moduleName],{})
-        print(self.fResult)
+        print('self.fResult=',self.fResult)
 
         logfilesAllChips = []
 
@@ -50,7 +50,9 @@ class Analyzer:
         NUnmaskable = 0
         NNonOperational = 0
         NNonOperationalPerChip = ""
-
+        NUnmaskablePerChip_dict = {}
+ 
+           
         for i in range(1,17):
 
             chipName = str(i)
@@ -58,6 +60,7 @@ class Analyzer:
 
             print(chipName)
             logfile = self.getRecentFile(testDir + '/log*_' + chipSearchString + '_*.log', chipSearchString)
+
             logfilesAllChips += [logfile]
 
             # Current draw
@@ -73,6 +76,11 @@ class Analyzer:
             # Pixel alive
             # number and list of dead, ineffient, noisy
             pafile = self.getRecentFile(testDir + '/mpa_test_'+ chipSearchString + '_*_pixelalive.csv', chipSearchString)
+            
+            #added
+            #print(pafile)
+            #print(chipSearchString)
+            
             self.fResult.updateResult([moduleName,chipName],self.getNumberAndList(pafile,'Dead'))
             self.fResult.updateResult([moduleName,chipName],self.getNumberAndList(pafile,'Inefficient'))
             self.fResult.updateResult([moduleName,chipName],self.getNumberAndList(pafile,'Noisy'))
@@ -89,6 +97,10 @@ class Analyzer:
             pedestalfile = self.getRecentFile(testDir + '/mpa_test_' + chipSearchString + '_*_PostTrim_CAL_CAL_Mean.csv', chipSearchString)
             self.fResult.updateResult([moduleName,chipName],self.getMeanStdOutliers(pedestalfile,'Pedestal'))
 
+            #Number and list of Unmaskable pixels
+            Unmaskable_dict = self.getNumberAndList(maskfile,'Unmaskable')
+            print(Unmaskable_dict)
+            NUnmaskablePerChip_dict[i] = Unmaskable_dict['NUnmaskablePix']
             # Bad bumps
             # number and list of bad bumps
             
@@ -100,12 +112,42 @@ class Analyzer:
             self.fResult.updateResult([moduleName,chipName],dict({'NNonOperational':len(nonOperational)}))
             NNonOperational += len(nonOperational)
             NNonOperationalPerChip += str(len(nonOperational))+','
+            print('nonOperationalPix =', nonOperational)
+            print('NNonOperational =', NNonOperational)
+            
+            PerChip_list = NNonOperationalPerChip.split(',')[:-1]
+            Grade_list = np.zeros(len(PerChip_list),str)
 
+            for n in range(len(PerChip_list)):
+               if int(PerChip_list[n])<19:
+                  Grade_list[n] = 'A'
+               elif 19<=int(PerChip_list[n])<=94:
+                  Grade_list[n] = 'B'
+               elif int(PerChip_list[n])>94 or NUnmaskable !=0:
+                  Grade_list[n] = 'C'
+        #Unmaskable_list = self.getNumberAndList(maskfile,'Unmaskable')
+        #Number and list of Unmaskable pixels
+            #Unmaskable_list = self.getNumberAndList(maskfile,'Unmaskable')
+            #print(files, Unmaskable_list)
+            #print(type(Unmaskable_list))        
+        NUnmaskablePerChip = list(NUnmaskablePerChip_dict.values())
+        for m in range(len(NUnmaskablePerChip)):
+           if int(NUnmaskablePerChip[m]) != 0:
+              Grade_list[m] = 'C'
+
+        print('\n Summary')
+        print('NNonOperationalPerChip =', NNonOperationalPerChip)
+        print('NUnmaskablePerchip=', NUnmaskablePerChip)
+        print('MPA grade =',Grade_list)
+        
+
+        #trying to add grade value to dictionary
         self.fResult.updateResult([moduleName,'NAbnormalCurrentChips'],NAbnormalCurrent)
         self.fResult.updateResult([moduleName,'NUnmaskablePix'],NUnmaskable)
         self.fResult.updateResult([moduleName,'NNonOperationalPix'],NNonOperational)
         self.fResult.updateResult([moduleName,'NNonOperationalPixPerChip'],NNonOperationalPerChip)
-
+        
+        
 #        IVData = self.getIVScan(testDir + '/IVScan_'+moduleName+'.csv')
 #        self.fResult.updateResult([moduleName,'Iat600V'],np.array(IVData[IVData['V']==-600]['I'])[0])
 
@@ -123,6 +165,8 @@ class Analyzer:
 
         # Add it to the dict
         returnDict[varname] = I
+       
+       	print(returnDict)
         return returnDict
         
     # Description
@@ -153,6 +197,10 @@ class Analyzer:
         returnDict["N"+varname+"Pix"] = len(indices)
         returnDict[varname+"Pix"] = pixelString
 
+        #print('DeadPix = ',returnDict['DeadPix'])
+        #print('InefficientPix = ',returnDict['InefficientPix'])
+        #print('UnmaskablePix = ',returnDict['UnmaskablePix'])
+        #print('NoisyPix = ',returnDict['NoisyPix'])
         return returnDict
         
     # Extract useful info about noise given the part name and hist of noise / channel

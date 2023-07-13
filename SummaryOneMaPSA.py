@@ -11,10 +11,11 @@ def main():
     # Analysis
     print("Here I would do analysis")
     analyzer = Analyzer.Analyzer()
-    testDir = "../Results_MPATesting/"+name
+    testDir = "/uscms/home/jennetd/nobackup/outer-tracker/mapsa-round3/Results_MPATesting/"+name
     analyzer.analyze(testDir,name)
 
     result = analyzer.getResult()
+   
 
     # XML
 #    print("Creating XML file for MaPSA "+name)
