@@ -186,8 +186,23 @@ class Analyzer:
         for c in range(0,16):
              Grade_dict[moduleName]['MPA Grade'][c+1] = FinalMPAGrade[c]
         Grade_dict[moduleName]['IV Grade'] = IVgrade
-        print(Grade_dict) 
-            
+        
+        #rework candidate
+        C_counts = list(Grade_dict[moduleName]['MPA Grade'].values()).count('C')
+        print("Number of grade 'C':", C_counts)
+        if C_counts in (1,2,3) and Grade_dict[moduleName]['MPA Grade']['IV Grade'] == 'A':
+            Grade_dict[moduleName]['Rework'] = 'Yes'
+        else:
+            Grade_dict[moduleName]['Rework'] = 'No'
+        
+        mpa_grade_values = list(Grade_dict[moduleName]['MPA Grade'].values())
+        iv_grade = Grade_dict[moduleName]['IV Grade']
+
+        total_grade = max(max(mpa_grade_values), iv_grade)
+        Grade_dict[moduleName]['MaPSA Grade'] = total_grade
+
+        print('Grade =', Grade_dict)
+
     def getCurrent(self, logfile, varname, tag):
         returnDict = {}
         if len(logfile) <= 1:
