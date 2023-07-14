@@ -190,7 +190,8 @@ class Analyzer:
         #rework candidate
         C_counts = list(Grade_dict[moduleName]['MPA Grade'].values()).count('C')
         print("Number of grade 'C':", C_counts)
-        if C_counts in (1,2,3) and Grade_dict[moduleName]['MPA Grade']['IV Grade'] == 'A':
+        
+        if C_counts in (1,2,3) and Grade_dict[moduleName]['IV Grade'] == 'A':
             Grade_dict[moduleName]['Rework'] = 'Yes'
         else:
             Grade_dict[moduleName]['Rework'] = 'No'
@@ -237,7 +238,7 @@ class Analyzer:
             indices = np.where((data<100) & (data>0))[0]
 
         elif varname == "Noisy":
-            indices = np.where((data>100))[0]
+            indices = np.where((data>300))[0]
 
         elif varname == "Unmaskable":
             indices = np.where(data > 0)[0]
