@@ -151,8 +151,9 @@ class Analyzer:
         print('NNonOperationalPerChip =', NNonOperationalPerChip)
         print('NUnmaskablePerchip=', NUnmaskablePerChip)
         print('Pixel Grade =',Grade_list)
-        print('\nMPA Grade=', FinalMPAGrade)  
-        #trying to add grade value to dictionary
+        #print('\nMPA Grade=', FinalMPAGrade)  
+        
+        
         self.fResult.updateResult([moduleName,'NAbnormalCurrentChips'],NAbnormalCurrent)
         self.fResult.updateResult([moduleName,'NUnmaskablePix'],NUnmaskable)
         self.fResult.updateResult([moduleName,'NNonOperationalPix'],NNonOperational)
@@ -164,7 +165,7 @@ class Analyzer:
         #IV data, I grader
         IVfile = self.getRecentFile(testDir + '/IVScan_'+ moduleName + '_*.csv', moduleName)
         IVData = self.getIVScan(IVfile)
-        print(IVData)
+#        print(IVData)
 
         At800 = IVData[IVData['V'] == -800.0]
         Iat800 = At800['I'].to_string(index=False)
@@ -176,7 +177,14 @@ class Analyzer:
         else:
            IVgrade = 'A'
         print('IV Grade =', IVgrade)
-    
+        
+        print('\nMPA Grade=', FinalMPAGrade)
+        Grade_dict = {}
+        Grade_dict[moduleName] = {}
+        Grade_dict[moduleName]['MPA Grade'] = FinalMPAGrade
+        Grade_dict[moduleName]['IV Grade'] = IVgrade
+        print(Grade_dict) 
+            
     def getCurrent(self, logfile, varname, tag):
         returnDict = {}
         if len(logfile) <= 1:
