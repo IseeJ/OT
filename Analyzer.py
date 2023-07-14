@@ -179,9 +179,12 @@ class Analyzer:
         print('IV Grade =', IVgrade)
         
         print('\nMPA Grade=', FinalMPAGrade)
+        
         Grade_dict = {}
         Grade_dict[moduleName] = {}
-        Grade_dict[moduleName]['MPA Grade'] = FinalMPAGrade
+        Grade_dict[moduleName]['MPA Grade'] = {}
+        for c in range(0,16):
+             Grade_dict[moduleName]['MPA Grade'][c+1] = FinalMPAGrade[c]
         Grade_dict[moduleName]['IV Grade'] = IVgrade
         print(Grade_dict) 
             
