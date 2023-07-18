@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ROOT>
+   <HPK_35494_002R>
+      <1>
+         <Ianalog>58.75</Ianalog>
+         <Idigital>77.25</Idigital>
+         <Ipad>19.9</Ipad>
+         <Itotal>155.9</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.62828985994543</NoiseMean>
+         <NoiseStd>0.31485345156974914</NoiseStd>
+         <NoiseNOutliersLow>1</NoiseNOutliersLow>
+         <NoiseOutliersLow>942,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>592,630,1610,</NoiseOutliersHigh>
+         <PedestalMean>13.759533898305085</PedestalMean>
+         <PedestalStd>4.590360916319244</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>4</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>592,630,1027,1610,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </1>
+      <2>
+         <Ianalog>58.4</Ianalog>
+         <Idigital>77.0</Idigital>
+         <Ipad>21.425</Ipad>
+         <Itotal>156.825</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5978885518298351</NoiseMean>
+         <NoiseStd>0.2879889809165554</NoiseStd>
+         <NoiseNOutliersLow>2</NoiseNOutliersLow>
+         <NoiseOutliersLow>140,676,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>2</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>244,741,</NoiseOutliersHigh>
+         <PedestalMean>13.674258474576272</PedestalMean>
+         <PedestalStd>2.3214490107392147</PedestalStd>
+         <PedestalNOutliersLow>2</PedestalNOutliersLow>
+         <PedestalOutliersLow>140,676,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>8</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>244,532,741,751,988,1052,1244,1516,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </2>
+      <3>
+         <Ianalog>60.05</Ianalog>
+         <Idigital>78.125</Idigital>
+         <Ipad>21.65</Ipad>
+         <Itotal>159.825</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.640818934583483</NoiseMean>
+         <NoiseStd>0.22188949865327204</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>1</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>151,</NoiseOutliersHigh>
+         <PedestalMean>13.779131355932204</PedestalMean>
+         <PedestalStd>1.9248180872971599</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>12</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>96,151,299,319,336,496,574,1024,1156,1296,1693,1720,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </3>
+      <4>
+         <Ianalog>59.925</Ianalog>
+         <Idigital>78.825</Idigital>
+         <Ipad>21.975</Ipad>
+         <Itotal>160.725</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5633374660220032</NoiseMean>
+         <NoiseStd>0.23585125583562475</NoiseStd>
+         <NoiseNOutliersLow>2</NoiseNOutliersLow>
+         <NoiseOutliersLow>89,360,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>217,233,1401,</NoiseOutliersHigh>
+         <PedestalMean>13.871822033898304</PedestalMean>
+         <PedestalStd>2.759131692605778</PedestalStd>
+         <PedestalNOutliersLow>2</PedestalNOutliersLow>
+         <PedestalOutliersLow>89,360,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>5</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>233,461,468,832,963,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </4>
+      <5>
+         <Ianalog>58.275</Ianalog>
+         <Idigital>76.675</Idigital>
+         <Ipad>20.775</Ipad>
+         <Itotal>155.725</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.569774286742452</NoiseMean>
+         <NoiseStd>0.21596701379802288</NoiseStd>
+         <NoiseNOutliersLow>1</NoiseNOutliersLow>
+         <NoiseOutliersLow>388,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>1</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>51,</NoiseOutliersHigh>
+         <PedestalMean>13.885063559322035</PedestalMean>
+         <PedestalStd>1.7844756019420143</PedestalStd>
+         <PedestalNOutliersLow>1</PedestalNOutliersLow>
+         <PedestalOutliersLow>388,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>22</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>44,171,207,508,615,638,728,836,854,944,948,970,1000,1367,1405,1488,1501,1621,1622,1624,1784,1850,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </5>
+      <6>
+         <Ianalog>58.775</Ianalog>
+         <Idigital>80.275</Idigital>
+         <Ipad>18.725</Ipad>
+         <Itotal>157.775</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>8</NNoisyPix>
+         <NoisyPix>125,126,127,128,129,130,131,132,</NoisyPix>
+         <NUnmaskablePix>8</NUnmaskablePix>
+         <UnmaskablePix>125,126,127,128,129,130,131,132,</UnmaskablePix>
+         <NNonOperational>8</NNonOperational>
+      </6>
+      <7>
+         <Ianalog>58.525</Ianalog>
+         <Idigital>77.9</Idigital>
+         <Ipad>21.975</Ipad>
+         <Itotal>158.4</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.6394005665784992</NoiseMean>
+         <NoiseStd>0.28721444476838887</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>21,1057,1363,</NoiseOutliersHigh>
+         <PedestalMean>13.780190677966102</PedestalMean>
+         <PedestalStd>1.8809621494622664</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>16</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>21,142,231,501,672,952,1057,1066,1358,1363,1370,1552,1664,1677,1683,1798,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </7>
+      <8>
+         <Ianalog>64.025</Ianalog>
+         <Idigital>80.0</Idigital>
+         <Ipad>21.9</Ipad>
+         <Itotal>165.925</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5711653084430113</NoiseMean>
+         <NoiseStd>0.2835004048003039</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>4</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>75,161,315,1600,</NoiseOutliersHigh>
+         <PedestalMean>13.609639830508474</PedestalMean>
+         <PedestalStd>1.8528071572085858</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>12</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>48,75,161,315,464,686,929,1051,1228,1336,1470,1600,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </8>
+      <9>
+         <Ianalog>60.15</Ianalog>
+         <Idigital>79.25</Idigital>
+         <Ipad>22.0</Ipad>
+         <Itotal>161.4</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5915098772110958</NoiseMean>
+         <NoiseStd>0.2585731169588236</NoiseStd>
+         <NoiseNOutliersLow>1</NoiseNOutliersLow>
+         <NoiseOutliersLow>749,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>2</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>849,1678,</NoiseOutliersHigh>
+         <PedestalMean>13.740466101694915</PedestalMean>
+         <PedestalStd>2.5087588503461005</PedestalStd>
+         <PedestalNOutliersLow>1</PedestalNOutliersLow>
+         <PedestalOutliersLow>749,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>6</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>849,1166,1522,1611,1678,1734,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </9>
+      <10>
+         <Ianalog>61.75</Ianalog>
+         <Idigital>79.15</Idigital>
+         <Ipad>21.875</Ipad>
+         <Itotal>162.775</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.6127285153623512</NoiseMean>
+         <NoiseStd>0.2952685286907722</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>21,23,823,</NoiseOutliersHigh>
+         <PedestalMean>13.96875</PedestalMean>
+         <PedestalStd>3.553402839896533</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>2</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>23,823,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </10>
+      <11>
+         <Ianalog>64.225</Ianalog>
+         <Idigital>80.325</Idigital>
+         <Ipad>21.5</Ipad>
+         <Itotal>166.05</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5813026029064392</NoiseMean>
+         <NoiseStd>0.1940760914458011</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>4</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>41,851,932,1547,</NoiseOutliersHigh>
+         <PedestalMean>13.827330508474576</PedestalMean>
+         <PedestalStd>2.1603747695715754</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>6</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>57,466,525,658,851,1466,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </11>
+      <12>
+         <Ianalog>66.45</Ianalog>
+         <Idigital>81.15</Idigital>
+         <Ipad>21.6</Ipad>
+         <Itotal>169.2</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.52632864019654</NoiseMean>
+         <NoiseStd>0.37537704455940385</NoiseStd>
+         <NoiseNOutliersLow>2</NoiseNOutliersLow>
+         <NoiseOutliersLow>259,1221,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>6</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>313,391,399,529,1374,1743,</NoiseOutliersHigh>
+         <PedestalMean>14.17531779661017</PedestalMean>
+         <PedestalStd>5.00079282958503</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>5</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>313,391,529,1374,1743,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </12>
+      <13>
+         <Ianalog>64.925</Ianalog>
+         <Idigital>82.375</Idigital>
+         <Ipad>21.45</Ipad>
+         <Itotal>168.75</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5964863632447415</NoiseMean>
+         <NoiseStd>0.20850711767580782</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>487,1321,1400,</NoiseOutliersHigh>
+         <PedestalMean>13.728283898305085</PedestalMean>
+         <PedestalStd>1.4760822013575206</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>18</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>118,519,528,608,1150,1151,1196,1206,1349,1392,1412,1421,1544,1594,1675,1722,1840,1865,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </13>
+      <14>
+         <Ianalog>65.25</Ianalog>
+         <Idigital>83.175</Idigital>
+         <Ipad>21.775</Ipad>
+         <Itotal>170.2</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5702367762702298</NoiseMean>
+         <NoiseStd>0.1882056435340222</NoiseStd>
+         <NoiseNOutliersLow>1</NoiseNOutliersLow>
+         <NoiseOutliersLow>1084,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>1</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>1214,</NoiseOutliersHigh>
+         <PedestalMean>13.903072033898304</PedestalMean>
+         <PedestalStd>1.6482627896135607</PedestalStd>
+         <PedestalNOutliersLow>1</PedestalNOutliersLow>
+         <PedestalOutliersLow>1084,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>18</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>6,93,162,605,731,779,1086,1196,1207,1209,1378,1417,1470,1562,1602,1647,1742,1746,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </14>
+      <15>
+         <Ianalog>65.95</Ianalog>
+         <Idigital>84.0</Idigital>
+         <Ipad>21.875</Ipad>
+         <Itotal>171.825</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5529336413314219</NoiseMean>
+         <NoiseStd>0.24830975102192995</NoiseStd>
+         <NoiseNOutliersLow>1</NoiseNOutliersLow>
+         <NoiseOutliersLow>1114,</NoiseOutliersLow>
+         <NoiseNOutliersHigh>5</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>38,172,632,1213,1411,</NoiseOutliersHigh>
+         <PedestalMean>13.796080508474576</PedestalMean>
+         <PedestalStd>2.5850461216669824</PedestalStd>
+         <PedestalNOutliersLow>1</PedestalNOutliersLow>
+         <PedestalOutliersLow>1114,</PedestalOutliersLow>
+         <PedestalNOutliersHigh>3</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>172,1112,1306,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </15>
+      <16>
+         <Ianalog>60.175</Ianalog>
+         <Idigital>77.3</Idigital>
+         <Ipad>19.55</Ipad>
+         <Itotal>157.025</Itotal>
+         <NDeadPix>0</NDeadPix>
+         <DeadPix />
+         <NInefficientPix>0</NInefficientPix>
+         <InefficientPix />
+         <NNoisyPix>0</NNoisyPix>
+         <NoisyPix />
+         <NUnmaskablePix>0</NUnmaskablePix>
+         <UnmaskablePix />
+         <NoiseMean>1.5841548890482282</NoiseMean>
+         <NoiseStd>0.2507367448574902</NoiseStd>
+         <NoiseNOutliersLow>0</NoiseNOutliersLow>
+         <NoiseOutliersLow />
+         <NoiseNOutliersHigh>3</NoiseNOutliersHigh>
+         <NoiseOutliersHigh>407,451,1069,</NoiseOutliersHigh>
+         <PedestalMean>13.771716101694915</PedestalMean>
+         <PedestalStd>1.810780107403396</PedestalStd>
+         <PedestalNOutliersLow>0</PedestalNOutliersLow>
+         <PedestalOutliersLow />
+         <PedestalNOutliersHigh>14</PedestalNOutliersHigh>
+         <PedestalOutliersHigh>264,407,586,628,694,750,768,776,826,902,1410,1483,1503,1665,</PedestalOutliersHigh>
+         <NNonOperational>0</NNonOperational>
+      </16>
+      <NAbnormalCurrentChips>0</NAbnormalCurrentChips>
+      <NUnmaskablePix>8</NUnmaskablePix>
+      <NNonOperationalPix>8</NNonOperationalPix>
+      <NNonOperationalPixPerChip>0,0,0,0,0,8,0,0,0,0,0,0,0,0,0,0,</NNonOperationalPixPerChip>
+   </HPK_35494_002R>
+</ROOT>
